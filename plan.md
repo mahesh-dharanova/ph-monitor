@@ -12,10 +12,11 @@ Roadmap broken into chunks. Edit only on a real scope decision.
 
 1. [x] Scaffold — repo structure, docs, stub modules, git init.
    Verified: `scripts/compile.sh` succeeds on the empty orchestrator.
-2. [ ] Sensor module — wire the PH-4502C (V+/G/PO), implement `sensor.cpp`
+2. [x] Sensor module — wire the PH-4502C (V+/G/PO), implement `sensor.cpp`
    (raw ADC read + voltage), confirm the Uno R4 WiFi's real ADC resolution on hardware.
-   Verified: upload + monitor, in pH-4/pH-7 (or available reference) liquid sessions
-   logged in `docs/TEST_LOG.md`.
+   Verified: upload + monitor, dry-air and distilled-water sessions logged in
+   `docs/TEST_LOG.md`. Still needs real pH 4/7/9-ish buffer sessions once available
+   (distilled water only confirmed the signal responds, not an actual pH value).
 3. [ ] Filter module — windowed average + median-of-5 smoothing.
    Verified: `tests/run_tests.sh` covers flat input, single-spike rejection, ramp response.
 4. [ ] Health module — range / stuck-value / warm-up checks, independent of calibration.
